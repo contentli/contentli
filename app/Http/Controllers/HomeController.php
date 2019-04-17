@@ -7,22 +7,42 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
+     * Show the startpage.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('home');
+        return view('pages.index');
+    }
+
+    /**
+     * Show the startpage.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function features()
+    {
+        return view('pages.features');
+    }
+
+    /**
+     * Show the startpage.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pricing()
+    {
+        return view('pages.pricing');
+    }
+
+    /**
+     * Show the startpage.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function documentation()
+    {
+        return view('pages.documentation');
     }
 }

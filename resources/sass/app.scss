@@ -1,6 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
-// Variables
 @import "bulma";
+
+// Hero
+.hero {
+    &.is-primary {
+        background: $grey-darker; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+            to right,
+            $black-bis,
+            $black-ter,
+            $grey-darker
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to right,
+            $black-bis,
+            $black-ter,
+            $grey-darker
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .title,
+    .subtitle {
+        color: $white;
+        font-weight: $weight-light;
+    }
+}
+
+// Navbar
+.navbar {
+    .button {
+        &.is-text {
+            background: transparent;
+            color: $white;
+            text-decoration: none;
+            &:focus,
+            &:hover {
+                background: rgba($primary, 0.75);
+            }
+            &.is-active {
+                background: rgba($primary, 0.85);
+            }
+        }
+    }
+}
+
+.navbar-burger {
+    color: $white;
+}
+
+// Content
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: $black-ter;
+}
+
+// Footer
+.footer {
+    background: $black-bis;
+}
